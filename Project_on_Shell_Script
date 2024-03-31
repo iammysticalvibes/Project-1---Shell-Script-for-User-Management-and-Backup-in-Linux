@@ -1,0 +1,65 @@
+Project_on_Shell_Script :
+
+For loop .sh format
+
+#!/bin/bash
+
+echo "helloji"
+
+sudo apt update
+
+mkdir himani.sh
+
+<<task create custom directories with a given range task
+
+echo "Enter the name of the root directory"
+
+read root_dir
+
+mkdir root_dir && cd root_dir
+
+echo "Enter the custom directory name"
+
+read custom_dir
+
+for (( i=$1; i<=$2; i++ )) do
+
+mkdir "${custom_dir}${i}"
+
+done
+
+tar flags for linux to know compression and decompression format i.e > for compressing file we will use C i.e > for extracting file we will use x
+
+C- Compress z- ZIP V- Verbose F-Filename
+
+ie > tar -czvf
+
+CRONTAB -E website for getting help for crontab
+
+https://crontab.guru/
+
+crontab -e /1 1-5 bash /home/ubuntu/scripts/backup.sh The main concept is that a project has a ___ responsible for all activities. They ___ are derived for a specific set of objectives.
+
+files are getting backup by crontab in every 1 min duration
+
+script for crontab backup working script for backup files from source to target destination folder
+
+#!/bin/bash
+
+<< comment
+
+This script will take backup from source to target
+
+comment
+
+src_dir="/home/ubuntu/scripts/" tgt_dir="/home/ubuntu/backups/"
+
+backup_filename="scripts_$(date '+%Y%m%d_%H%M%S').tar.gz"
+
+echo "backup_started"
+
+echo "Backing up to $backup_filename ...."
+
+tar -czvf "${tgt_dir}/${backup_filename}" "${src_dir}"
+
+#to make shell script file executable chmod +x script.sh
